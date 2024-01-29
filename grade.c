@@ -53,6 +53,7 @@ int main()
 }
 
 //function definition
+//subject wise function definition
 int eng_102()
 {
     printf("Grade = ");
@@ -206,7 +207,7 @@ void grade_point()
     }
 }
 
-//grade point to calculate
+//grade point to calculate sgpa
 void sgpa_grade_point()
 {
     if(marks>=80 && marks<=100)
@@ -251,7 +252,7 @@ void sgpa_grade_point()
     }
 }
 
-//credit hour
+//credit hour to calculat sgpa
 float credit_hour()
 {
     int credit, credit_csc_183, credit_art_204, credit_eng_102, credit_mat_147, credit_phy_111;
