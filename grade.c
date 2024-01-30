@@ -11,8 +11,7 @@ date: 28-01-2024
 int marks;
 
 //fuction declaration
-void grade_letter();
-void grade_point();
+void grade_letter_and_point();
 void sgpa_grade_point();
 float credit_hour();
 
@@ -56,45 +55,35 @@ int main()
 //subject wise function definition
 int eng_102()
 {
-    printf("Grade = ");
-    grade_letter(marks);
-    grade_point(marks);
+    grade_letter_and_point(marks);
 
     return 0;
 }
 
 int math_147()
 {
-    printf("Grade = ");
-    grade_letter(marks);
-    grade_point(marks);
+    grade_letter_and_point(marks);
 
     return 0;
 }
 
 int csc_183()
 {
-    printf("Grade = ");
-    grade_letter(marks);
-    grade_point(marks);
+    grade_letter_and_point(marks);
 
     return 0;
 }
 
 int phy_111()
 {
-    printf("Grade = ");
-    grade_letter(marks);
-    grade_point(marks);
+    grade_letter_and_point(marks);
 
     return 0;
 }
 
 int art_204()
 {
-    printf("Grade = ");
-    grade_letter(marks);
-    grade_point(marks);
+    grade_letter_and_point(marks);
 
     return 0;
 }
@@ -102,110 +91,61 @@ int art_204()
 int sgpa_csc_183()
 {
     int total_grade;
-    total_grade = sgpa_grade_point(marks) * credit_hour(credit_csc_183);
+   
 
     return 0;
 }
 
-//grade letter to print
-void grade_letter()
+//grade letter and grade point to print
+void grade_letter_and_point()
 {
     if (marks > 100)
     {
-        printf("Invalid Marks ");
+        printf("Invalid Marks & Invalid Grade");
     }
     
     else if(marks>=80 && marks<=100)
     {
-        printf("A+ ");
+        printf("Grade Letter: A+ & Grade point: 4.0");
     }
     else if (marks>=75 && marks<=79)
     {
-        printf("A ");
+        printf("Grade Letter: A & Grade point: 3.75");
     }
     else if (marks>=70 && marks<=74)
     {
-        printf("A- ");
+        printf("Grade Letter: A- & Grade point: 3.50");
     }
     else if (marks>=65 && marks<=69)
     {
-        printf("B+ ");
+        printf("Grade Letter: B+ & Grade point: 3.25");
     }
     else if (marks>=60 && marks<=64)
     {
-        printf("B ");
+        printf("Grade Letter: B & Grade point: 3.0");
     }
     else if (marks>=55 && marks<=59)
     {
-        printf("B- ");
+        printf("Grade Letter: B- & Grade point: 2.75");
     }
     else if (marks>=50 && marks<=54)
     {
-        printf("C+ ");
+        printf("Grade Letter: C+ & Grade point: 2.50");
     }
     else if (marks>=45 && marks<=49)
     {
-        printf("C ");
+        printf("Grade Letter: C & Grade point: 2.25");
     }
     else if (marks>=40 && marks<=44)
     {
-        printf("C- ");
+        printf("Grade Letter: D & Grade point: 2.0");
     }
-    else if (marks>=0 && marks<=39)
+    else
     {
-        printf("F ");
+        printf("Grade Letter: F & Grade point: 0.0");
     }
 }
 
-//grade point to print
-void grade_point()
-{
-    if (marks > 100)
-    {
-        printf("invalid Grade");
-    }
-    
-    else if(marks>=80 && marks<=100)
-    {
-        printf("4.0");
-    }
-    else if (marks>=75 && marks<=79)
-    {
-        printf("3.75");
-    }
-    else if (marks>=70 && marks<=74)
-    {
-        printf("3.50");
-    }
-    else if (marks>=65 && marks<=69)
-    {
-        printf("3.25");
-    }
-    else if (marks>=60 && marks<=64)
-    {
-        printf("3.00");
-    }
-    else if (marks>=55 && marks<=59)
-    {
-        printf("2.75");
-    }
-    else if (marks>=50 && marks<=54)
-    {
-        printf("2.50");
-    }
-    else if (marks>=45 && marks<=49)
-    {
-        printf("2.25");
-    }
-    else if (marks>=40 && marks<=44)
-    {
-        printf("2.00");
-    }
-    else if (marks>=0 && marks<=39)
-    {
-        printf("0.0");
-    }
-}
 
 //grade point to calculate sgpa
 void sgpa_grade_point()
@@ -246,7 +186,7 @@ void sgpa_grade_point()
     {
         float grade = 2.00;
     }
-    else if (marks>=0 && marks<=39)
+    else
     {
         float grade = 0.0;
     }
